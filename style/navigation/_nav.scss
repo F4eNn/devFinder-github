@@ -1,0 +1,76 @@
+.navigation {
+	display: flex;
+	flex-direction: column;
+	margin: 2rem 0 2rem 0;
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 2rem;
+		.theme-container button {
+			display: flex;
+			align-items: center;
+			text-transform: uppercase;
+			background-color: transparent;
+			color: #697c9a;
+			transition: 0.4s color;
+		}
+		.theme-container button svg {
+			fill: #697c9a;
+			margin-left: 10px;
+			transition: 0.5s fill;
+		}
+		.btn-mode:hover button,
+		.btn-mode:hover button svg {
+			color: var(--button-hover-mode);
+			fill: var(--button-hover-mode);
+		}
+	}
+	form {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 5px 0 10px;
+		border-radius: 10px;
+		box-shadow: 5px 10px 10px rgba(30, 0, 94, 0.103);
+		background-color: var(--background-app);
+	}
+
+	form:focus-within {
+		outline: 1px solid blue;
+	}
+	form input {
+		width: 100%;
+		border: none;
+		outline: none;
+		padding: 25px 0 25px 5px;
+		color: var(--overall-text-color-mode);
+		background-color: var(--background-app);
+		font-size: clamp(0.6rem, 3.5vw, 1rem);
+	}
+	form input::placeholder {
+		color: var(--overall-text-color-mode);
+		font-size: clamp(0.6rem, 3.5vw, 1rem);
+	}
+	form img {
+		width: 20px;
+		margin-left: 10px;
+	}
+	form span {
+		display: none;
+		text-align: center;
+		width: 150px;
+		font-size: clamp(0.5rem, 2.5vw, 0.7rem);
+		color: red;
+	}
+	form button {
+		background-color: var(--blue);
+		color: var(--pure-white);
+		padding: 18px 30px;
+		border-radius: 10px;
+		transition: 0.3s background-color;
+	}
+	form button:hover {
+		background-color: var(--button-hover);
+	}
+}
